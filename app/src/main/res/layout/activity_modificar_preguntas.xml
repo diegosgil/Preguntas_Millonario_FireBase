@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@color/vainilla"
+    tools:context=".modificarPreguntas">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="93dp"
+                android:src="@drawable/pregunta">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/etCrearPreguntas"
+                android:layout_width="296dp"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="Modificar preguntas"
+                android:textColor="@color/black"
+                android:textSize="25sp">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@color/GrisX1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etModificarPregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pregunta"
+            android:padding="8dp"
+            android:textSize="15dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/etModificarOpcion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Opcion 1"
+            android:padding="8dp"
+            android:textSize="15dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/etModificarOpcion2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Opcion 2"
+            android:padding="8dp"
+            android:textSize="15dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/etModificarOpcion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Opcion 3"
+            android:padding="8dp"
+            android:textSize="15dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/etModificarOpcionCorrecta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Opcion Correcta"
+            android:padding="8dp"
+            android:textSize="15dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/etModificarPuntos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:hint="Puntos"
+            android:textSize="15dp">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/btnModificar"
+                android:layout_width="175dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="15dp"                android:backgroundTint="@color/GrisX2"
+                android:text="Modificar">
+            </Button>
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="175dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="2dp"
+                android:textSize="15dp"                android:backgroundTint="@color/red"
+                android:text="Eliminar">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnVolver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="15dp"
+                android:text="Volver">
+            </Button>
+    </LinearLayout>
+
+</LinearLayout>

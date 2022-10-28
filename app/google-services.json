@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "924877481684",
+    "project_id": "millfirebase",
+    "storage_bucket": "millfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924877481684:android:58f5dfcce48159cc3c7d41",
+        "android_client_info": {
+          "package_name": "com.example.millonarioconarchivosplanos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924877481684-epiavbfpruc8qpg7o29rm30apc292vu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqfoAHfQ6xSgzeJo129yi6wA4EinMHKu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924877481684-epiavbfpruc8qpg7o29rm30apc292vu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

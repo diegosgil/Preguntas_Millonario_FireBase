@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".CrearJugador"
+    android:orientation="vertical"
+    android:background="@color/vainilla">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="240dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/logo_juego_millonario_16">
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etNombreJugador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre:"
+            android:textSize="20dp">
+        </EditText>
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/verde"
+            android:text="Play"
+            android:textColor="@color/white"
+            android:textSize="20dp">
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btnMenuJugador"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:text="Volver al Menú">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

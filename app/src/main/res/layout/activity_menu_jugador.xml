@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menuJugador"
+    android:orientation="vertical"
+    android:background="@color/vainilla"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="93dp"
+                android:src="@drawable/administrador">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvAdministrador"
+                android:layout_width="296dp"
+                android:layout_height="match_parent"
+                android:background="@color/teal_700"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="Jugador"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tvDeseasHacer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
+            android:text="Bienvenido administrador ☺"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnJugarJugador"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Jugar"
+            android:textSize="15dp" />
+
+        <!--
+        <Button
+            android:id="@+id/btnAdministrarPreguntas"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Administrar preguntas"
+            android:textSize="15dp" />
+        -->
+
+        <Button
+            android:id="@+id/btnPuntuacionJugador"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Puntuacion"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btnCerrarSesionJugador"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/red"
+            android:text="Cerrar sesión">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
