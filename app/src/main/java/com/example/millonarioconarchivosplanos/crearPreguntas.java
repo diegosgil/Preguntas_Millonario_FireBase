@@ -21,7 +21,8 @@ public class crearPreguntas extends AppCompatActivity {
     ListView lvAparecenPreguntas;
     EditText etPregregunta, etOpcion1, etOpcion2, etOpcion3, etOpcionCorrecta, etPuntos;
 
-    String Pregunta, OpcionUno, OpcionDos, OpcionTres, OpcionCorrecta, OpcionPuntos;
+    String Pregunta, OpcionUno, OpcionDos, OpcionTres, OpcionCorrecta;
+    int OpcionPuntos;
     CRUDPreguntas objDB = new CRUDPreguntas(this);
 
     @Override
@@ -38,7 +39,7 @@ public class crearPreguntas extends AppCompatActivity {
                 OpcionDos = etOpcion2.getText().toString();
                 OpcionTres = etOpcion3.getText().toString();
                 OpcionCorrecta = etOpcionCorrecta.getText().toString();
-                OpcionPuntos = etPuntos.getText().toString();
+                OpcionPuntos = Integer.parseInt(etPuntos.getText().toString());
                 etPregregunta.setText("");
                 etOpcion1.setText("");
                 etOpcion2.setText("");
@@ -46,8 +47,7 @@ public class crearPreguntas extends AppCompatActivity {
                 etOpcionCorrecta.setText("");
                 etPuntos.setText("");
 
-
-                objDB.crearPregunta(Pregunta, OpcionCorrecta, OpcionUno, OpcionDos, OpcionTres, Integer.parseInt(OpcionPuntos));
+                objDB.crearPregunta(Pregunta, OpcionCorrecta, OpcionUno, OpcionDos, OpcionTres, OpcionPuntos);
                 Toast.makeText(getApplicationContext(), "Pregunta Creada", Toast.LENGTH_SHORT).show();
             }
         });
@@ -68,7 +68,6 @@ public class crearPreguntas extends AppCompatActivity {
             }
         });
     }
-
 
     private void conectar() {
         etPregregunta = findViewById(R.id.etPregregunta);

@@ -16,8 +16,9 @@ public class modificarPreguntas extends AppCompatActivity {
     EditText etModificarPregunta, etModificarOpcion1, etModificarOpcion2, etModificarOpcion3;
     EditText etModificarOpcionCorrecta, etModificarPuntos;
     Button btnModificar, btnEliminar, btnVolver;
+    String id, pregunta, respUno, respDos, respTres, respFinal;
 
-    int Posicion;
+    int puntaje;
     ArrayList<OPregunta> Preguntas = new ArrayList<>();
     CRUDPreguntas objDB = new CRUDPreguntas(this);
 
@@ -27,8 +28,9 @@ public class modificarPreguntas extends AppCompatActivity {
         setContentView(R.layout.activity_modificar_preguntas);
         conectar();
 
-        Posicion = Integer.parseInt(getIntent().getStringExtra("id"));
-        Preguntas = objDB.leerPregunta(Posicion);
+        //Posicion = Integer.parseInt(getIntent().getStringExtra("id"));
+        //Preguntas = objDB.leerPregunta(Posicion);
+        Preguntas = llamarPreguntas();
 
         etModificarPregunta.setText(Preguntas.get(0).getQuestion());
         etModificarOpcion1.setText(Preguntas.get(0).getRespuesta1());
@@ -41,14 +43,15 @@ public class modificarPreguntas extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String P = etModificarPregunta.getText().toString();
-                String OpUno = etModificarOpcion1.getText().toString();
-                String OpDos = etModificarOpcion2.getText().toString();
-                String OpTres = etModificarOpcion3.getText().toString();
-                String Correcta = etModificarOpcionCorrecta.getText().toString();
-                int Puntos = Integer.parseInt(etModificarPuntos.getText().toString());
+                id = Preguntas.get(0).toString();
+                pregunta = etModificarPregunta.getText().toString();
+                respUno = etModificarOpcion1.getText().toString();
+                respDos= etModificarOpcion2.getText().toString();
+                respTres = etModificarOpcion3.getText().toString();
+                respFinal = etModificarOpcionCorrecta.getText().toString();
+                puntaje = Integer.parseInt(etModificarPuntos.getText().toString());
 
-                objDB.actulizarPregunta(String.valueOf(Posicion), P , OpUno, OpDos,OpTres, Correcta,  Puntos);
+                objDB.actulizarPregunta(id, pregunta , respUno, respDos,respTres, respFinal,  puntaje);
 
                 Toast.makeText(getApplicationContext(), "Pregunta Modificada", Toast.LENGTH_SHORT).show();
                 Intent I = new Intent(getApplicationContext(), administrarPreguntas.class);
@@ -59,7 +62,7 @@ public class modificarPreguntas extends AppCompatActivity {
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                objDB.eliminarPregunta(String.valueOf(Posicion));
+                objDB.eliminarPregunta(String.valueOf(puntaje));
                 Toast.makeText(getApplicationContext(), "Pregunta Eliminada", Toast.LENGTH_SHORT).show();
                 Intent I = new Intent(getApplicationContext(), administrarPreguntas.class);
                 startActivity(I);
@@ -73,6 +76,20 @@ public class modificarPreguntas extends AppCompatActivity {
                 startActivity(I);
             }
         });
+    }
+
+    private ArrayList<OPregunta> llamarPreguntas() {
+        ArrayList<OPregunta> auxAddPregunta = new ArrayList<>();
+        Bundle InfPregunta = getIntent().getExtras();
+        id = InfPregunta.getString("id");
+        pregunta = InfPregunta.getString("Pregunta");
+        respUno = InfPregunta.getString("RespuestaUno");
+        respDos = InfPregunta.getString("RespuestaDos");
+        respTres = InfPregunta.getString("RespuestaTres");
+        respFinal = InfPregunta.getString("RespuestaFinal");
+        puntaje = InfPregunta.getInt("Puntaje");
+        auxAddPregunta.add(new OPregunta(id, pregunta, respUno, respDos, respTres, respFinal, puntaje));
+        return auxAddPregunta;
     }
 
     private void conectar() {
